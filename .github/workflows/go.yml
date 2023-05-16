@@ -55,3 +55,8 @@ jobs:
       
       - name: Build
         run: go build -v main.go
+  
+  dokcer:
+    needs: build
+    uses: ./.github/workflows/Docker.yml
+    
